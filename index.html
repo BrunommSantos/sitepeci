@@ -6,149 +6,204 @@
     <title>PECI</title>
     <style>
         /* General Style */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #333; /* Add a base text color for better contrast */
+}
 
-        /* Full-screen background section */
-        .main-section {
-            height: 100vh;
-            background-image: url('droneplcholder.jpg'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+/* Full-screen background section */
+.main-section {
+    height: 100vh;
+    background-image: url('droneplcholder.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
 
-        .main-section h1 {
-            font-size: 4rem;
-        }
+.main-section h1 {
+    font-size: 3.5rem; /* Slightly smaller for a cleaner look */
+    margin-bottom: 20px;
+}
 
-        .learn-more-btn {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+.learn-more-btn {
+    margin-top: 20px;
+    padding: 12px 25px; /* Smaller padding for a cleaner look */
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
 
-        .learn-more-btn:hover {
-            background-color: #0056b3;
-        }
+.learn-more-btn:hover {
+    background-color: #0056b3;
+}
 
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            z-index: 1000;
-            display: flex;
-            justify-content: flex-end; /* Align items to the right */
-        }
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px 30px; /* Make padding consistent */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        /* Scrollable Content Sections */
-        section {
-            height: auto; /* Height is auto to accommodate content */
-            padding: 50px;
-            transition: background-color 0.5s ease; /* Smoother transition */
-            display: flex; /* Use flexbox for layout */
-            align-items: flex-start; /* Align items at the start */
-            flex-direction: column; /* Stack items vertically */
-        }
+/* Scrollable Content Sections */
+section {
+    padding: 80px 50px; /* Add consistent padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align content */
+}
 
-        /* Initial colors for sections */
-        #problem {
-            background-color: #eaf2f8; /* Lighter greyish-blue */
-        }
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center; /* Center-align headings */
+}
 
-        #goals {
-            background-color: #d2e1eb; /* Slightly darker greyish-blue */
-        }
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    text-align: justify; /* Justify for cleaner alignment */
+}
 
-        #about {
-            background-color: #c5d6e1; /* Light greyish-blue */
-        }
+/* Goals section layout */
+.goals-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 50px; /* Increased gap between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between; /* Spread the columns further apart */
+}
 
-        h2 {
-            font-size: 3rem;
-            text-align: left; /* Align 'Goals' to the left */
-            margin-bottom: 20px;
-            padding-left: 10px; /* Added padding for aesthetics */
-        }
+.goal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
 
-        p {
-            font-size: 1.5rem; /* Increased font size */
-            max-width: 800px;
-            margin: 30px auto; /* Increased margin for spacing */
-            text-align: left; /* Align text to the left */
-            line-height: 1.6; /* Improved line spacing */
-        }
+.goal-text {
+    flex: 1;
+    margin-bottom: 20px;
+}
 
-        /* Goals section layout */
-        .goals-content {
-            display: flex; /* Flexbox for layout */
-            flex-direction: column; /* Stack items vertically */
-            width: 100%; /* Full width */
-            max-width: 800px; /* Max width for the section */
-            padding-left: 350px; /* Padding for the left side */
-        }
+.goal-image {
+    max-width: 200px; /* Ensure image size is constrained */
+    height: auto;
+    margin-top: 20px;
+}
 
-        .goal-item {
-            display: flex; /* Use flexbox for goal items */
-            align-items: center; /* Center align items vertically */
-            margin-bottom: 40px; /* Space between items */
-        }
+/* Force 5G to the left, Mesh to the right, Coordination at the bottom */
+.goal-item:nth-child(1) {
+    grid-column: 1 / span 1; /* 5G to the left */
+    align-items: flex-start;
+    text-align: left;
+}
 
-        .goal-text {
-            flex: 1; /* Take remaining space */
-            padding-right: 20px; /* Increased space between text and image */
-            margin-left: 0px; /* Reduced margin for left alignment */
-        }
+.goal-item:nth-child(2) {
+    grid-column: 2 / span 5; /* Mesh Network to the right */
+    align-items: center;
+    text-align: right;
+    vertical-align: top;
+    
+}
 
-        .goal-image {
-            width: 150px; /* Fixed width for images */
-            height: auto; /* Maintain aspect ratio */
-            padding-left: 150px;
-        }
+.goal-item:nth-child(3) {
+    grid-column: 1 / -1; /* Drone Coordination spans full width below */
+    align-items: center;
+    text-align: center;
+}
 
-        .credits {
-    margin-top: 20px; /* Space above the credits section */
-    font-size: 1.5rem; /* Font size for credits */
-    line-height: 1.6; /* Improve line spacing */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .goals-content {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+        gap: 30px;
+    }
+
+    .goal-item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .goal-item:nth-child(1),
+    .goal-item:nth-child(2) {
+        align-items: center;
+        text-align: center;
+    
+    }
+}
+
+/* About Us Section */
+.credits {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center; /* Center-align credits */
 }
 
 .group, .advisors {
-    margin-bottom: 10px; /* Space between group and advisor lines */
+    margin-bottom: 5px;
 }
+
+/* Background color transition */
+#problem, #goals, #about {
+    background-color: #f3f6f9; /* Light background for clarity */
+    transition: background-color 0.5s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .goals-content {
+        grid-template-columns: 1fr; /* Make it a single column on small screens */
+    }
+
+    .goal-item {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .goal-text {
+        padding-right: 0;
+    }
+}
+
 
     </style>
 </head>
@@ -191,17 +246,19 @@
                     </p>
                 </div>
                 <div class="goal-image">
-                    <img src="drone.png" alt="5G Technology" /> <!-- Replace with your image URL -->
+                    <img src="5g.png" alt="5G Technology" /> 
                 </div>
             </div>
             <div class="goal-item">
                 <div class="goal-text">
                     <p>
-                        <strong>Mesh Network:</strong> Establishing a mesh network within the drone swarm to guarantee strong connectivity.
+                        <strong>Mesh Network:</strong> Establishing a mesh network within the drone swarm to guarantee robust and efficient connectivity to ensure that users have acess to the internet
                     </p>
                 </div>
                 <div class="goal-image">
-                    <img src="drone.png" alt="Mesh Network" /> 
+                    <div class="goal-image3">
+                    <img src="mesh.png" alt="Mesh Network" /> 
+                    </div>
                 </div>
             </div>
             <div class="goal-item">
@@ -223,7 +280,7 @@
        
         <div class="credits">
             <div class="group">
-                <strong>Group:</strong> Bruno Oliveira, Bruno Santos, João Bastos, João Su, Rúben Gomes,Simão Almeida
+                <strong>Group:</strong> Bruno Oliveira, Bruno Santos, João Bastos, João Su, Rúben Gomes, Simão Almeida
             </div>
             <div class="advisors">
                 <strong>Advisors:</strong> Diogo Correia, Duarte Raposo, Pedro Rito, Pedro Valente, Susana Sargento  
