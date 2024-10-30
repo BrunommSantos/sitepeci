@@ -385,13 +385,13 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-    width: 118px;
+    width: 60px;
 	height: 36px;
 }
 
 .navbar .logo-text {
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 1.875rem;
 	line-height: 1rem;
 	text-decoration: none;
