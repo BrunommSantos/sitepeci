@@ -1290,3 +1290,8 @@ a:hover.back-to-top {
 #book {
 	margin-left: 9.5%;
 }
+
+#next:hover {
+	background-blend-mode: darken;
+	cursor: pointer;
+}

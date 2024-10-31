@@ -76,3 +76,48 @@
 	});
 
 })(jQuery);
+
+// Slides 
+// Initialize variables
+let currentIndex = 0;
+const images = [];
+
+
+// Function to load images into the slideshow container
+function loadImages(id, path, totalImages) {
+    for (let i = 1; i <= totalImages; i++) {
+        images.push(path +`/M1-${i}.jpg`);
+    }
+
+    const slideshow = document.getElementById(id);
+    images.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.classList.add(id + "-image");
+        if (index === currentIndex) img.classList.add("active"); // Show the first image initially
+        slideshow.appendChild(img);
+    });
+}
+
+// Function to show the current image based on the index
+function showImage(index, id) {
+    const imgElement = document.getElementById(id);
+
+    imgElement.src = images[index];
+    
+}
+
+// Show the next image
+function nextImage(id) {
+    if (currentIndex == images.length - 1) return;
+    currentIndex = (currentIndex + 1) % images.length; // Wrap around if at the end
+    showImage(currentIndex, id);
+}
+
+// Show the previous image
+function prevImage(id) {
+    if (currentIndex == 0) return;
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around if at the beginning
+    
+    showImage(currentIndex, id);
+}

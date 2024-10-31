@@ -106,7 +106,7 @@
 
 
     <!-- Basic -->
-    <div class="ex-basic-1 pt-4" style="margin-bottom: -4%;">
+    <div class="ex-basic-1 pt-4" style="margin-bottom: -3%;">
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
@@ -124,18 +124,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-fluid mt-5 mb-3" id="slide_cover" src="images2/M1-Presentation.png" alt="alternative">
+                    <button id="prev" class="btn btn-primary" style="margin-left: 56%;margin-bottom: -6%;" onclick="prevImage('slide_cover')">Previous</button>
+                    <button id="next" class="btn btn-primary" style="margin-left: 0.5%;margin-bottom: -6%;" onclick="nextImage('slide_cover')">Next</button>
+                    <img class="img-fluid mt-5 mb-3" id="slide_cover" src="images2/Presentation1/M1-1.jpg" alt="alternative">
                 </div> <!-- end of col -->
                 <i class="fas fa-book  pr-1 fa-fw" id="book"></i>
                 <p style="margin-top: -0.4% ;">Download <a style="text-decoration: none; color: rgb(18, 160, 255);" href="https://docs.google.com/presentation/d/15E0gGZSQmgl55_wCBmoq6EW6EuFmi3tmC6rQxLAvjFE/edit#slide=id.g3081f4cea02_1_77">here</a></p>
             </div> <!-- end of row -->
-        </div> <!-- end of container -->
+        </div> <!-- end of container -->>
     </div> <!-- end of ex-basic-1 -->
     <!-- end of basic -->
 
     <!-- Basic -->
-    <div class="ex-basic-1 pt-4">
+    <div class="ex-basic-1 pt-4" style="margin-top: -5%;margin-bottom: 5%;">
         <div class="container">
+            <hr>
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
                     <p></p>
@@ -217,5 +220,12 @@
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    <!-- Add function to load slides for each presentation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadImages('slide_cover', '../images2/Presentation1', 9);
+        });
+    </script>
 </body>
 </html>
