@@ -86,7 +86,7 @@ const images = [];
 // Function to load images into the slideshow container
 function loadImages(id, path, totalImages) {
     for (let i = 1; i <= totalImages; i++) {
-        images.push(path +`/M1-${i}.jpg`);
+        images.push(path +`/M1-${i}.png`);
     }
 
     const slideshow = document.getElementById(id);
