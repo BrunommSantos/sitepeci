@@ -1,0 +1,33 @@
+	<div class="split">
+		<div class="area-1">
+		</div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2 bg-gray">
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12">     
+                        
+                        <!-- Text Container -->
+                        <div class="text-container">
+                            <h2>TODO</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi sequi consequuntur dolore voluptatum provident quas reiciendis veritatis. Reiciendis sit magnam unde eligendi libero. Excepturi modi qui tempore ex quo.</p>
+                            <h5>TODO</h5>
+                            <p>tatum provident quas reiciendis veritatis. Reiciendis sit magnam unde eligendi libero. Excepturi modi qui tempore ex quo</p>
+                            <h5>TODO</h5>
+                            <p>tatum provident quas reiciendis veritatis. Reiciendis sit magnam unde eligendi libero. Excepturi modi qui tempore ex quo</p>
+                            
+                            <div class="icons-container">
+                                <img src="images2/5g.png" alt="alternative">
+                                <img src="images2/5g.png" alt="alternative">
+                                <img src="images2/5g.png" alt="alternative">
+                                <img src="images2/5g.png" alt="alternative">
+                                <img src="images2/5g.png" alt="alternative">
+                                <img src="images2/5g.png" alt="alternative">
+                            </div> <!-- end of icons-container -->
+                        </div> <!-- end of text-container -->
+                        <!-- end of text container -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+		</div> <!-- end of area-2 -->
+    </div> <!-- end of split -->
+    <!-- end of details -->
