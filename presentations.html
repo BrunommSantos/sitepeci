@@ -99,7 +99,10 @@
 
     <br>
 
-    <!-- Basic -->
+    <!---->
+    <!-- First Presentation-->
+    <!---->
+
     <div class="ex-basic-1 pt-4" style="margin-bottom: -3%;">
         <div class="container">
             <div class="row">
@@ -118,17 +121,60 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <button id="prev" class="btn btn-primary" style="margin-left: 56%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="prevImage('slide_cover')">Previous
+                    <button id="prev" class="btn btn-primary" style="margin-left: 56%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="prevImage(1,'slide_cover1')">Previous
                     </button>
                     
-                    <button id="next" class="btn btn-primary" style="margin-left: 0.5%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="nextImage('slide_cover')">Next
+                    <button id="next" class="btn btn-primary" style="margin-left: 0.5%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="nextImage(1,'slide_cover1')">Next
                     </button>
                     
-                    <img class="img-fluid mt-5 mb-3" id="slide_cover" src="images2/Presentation1/M1-1.png" alt="alternative">
+                    <img class="img-fluid mt-5 mb-3" id="slide_cover1" src="images2/Presentation1/M1-1.png" alt="alternative">
 
                 </div> <!-- end of col -->
                 <i class="fas fa-book  pr-1 fa-fw" id="book"></i>
-                <p style="margin-top: -0.4% ;">Download <a style="text-decoration: none; color: rgb(18, 160, 255);" href="https://docs.google.com/presentation/d/15E0gGZSQmgl55_wCBmoq6EW6EuFmi3tmC6rQxLAvjFE/edit#slide=id.g3081f4cea02_1_77">here</a></p>
+                <p style="margin-top: -0.4% ;">Download <a style="text-decoration: none; color: rgb(18, 160, 255);" href="https://docs.google.com/presentation/d/15E0gGZSQmgl55_wCBmoq6EW6EuFmi3tmC6rQxLAvjFE/">here</a></p>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->>
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+    
+    <br>
+    <br>
+
+    <!---->
+    <!-- Second Presentation -->
+    <!---->
+
+    <div class="ex-basic-1 pt-4" style="margin-bottom: -3%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h2 class="mb-3">Milestone 2 - Requirements elicitation, background and related work, design and
+                        viable solution(s).</h2>
+                    <p class="mb-4">Second presentation about the use cases, requirements of the project along with an arquitecture with the 
+                        different technologies involved.</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <button id="prev" class="btn btn-primary" style="margin-left: 56%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="prevImage(2,'slide_cover2')">Previous
+                    </button>
+                    
+                    <button id="next" class="btn btn-primary" style="margin-left: 0.5%;margin-bottom: -6%; position: relative; color:rgb(0, 0, 0);" onclick="nextImage(2,'slide_cover2')">Next
+                    </button>
+                    
+                    <img class="img-fluid mt-5 mb-3" id="slide_cover2" src="images2/Presentation2/M2-1.png" alt="alternative">
+
+                </div> <!-- end of col -->
+                <i class="fas fa-book  pr-1 fa-fw" id="book"></i>
+                <p style="margin-top: -0.4% ;">Download <a style="text-decoration: none; color: rgb(18, 160, 255);" href="https://docs.google.com/presentation/d/1u-zUCd0yLvmtykoi2n1Rzqlrrzh_gGOF1tC-DDXUXOo/">here</a></p>
             </div> <!-- end of row -->
         </div> <!-- end of container -->>
     </div> <!-- end of ex-basic-1 -->
@@ -192,7 +238,8 @@
 
     <!-- Add function to load slides for each presentation -->
     <script>
-            loadImages('slide_cover', 'images2/Presentation1', 9);
+            loadImages(1,'slide_cover1', 'images2/Presentation1', 9);
+            loadImages(2,'slide_cover2', 'images2/Presentation2', 12);
     </script>
 </body>
 </html>

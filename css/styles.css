@@ -1281,7 +1281,7 @@ a:hover.back-to-top {
 }
 /* end of min-width 1200px */
 
-#slide_cover {
+[id^="slide_cover"] {
 	border: 1px solid;
 	width: 70%;
 	margin-left: 8.5%;

@@ -79,45 +79,49 @@
 
 // Slides 
 // Initialize variables
-let currentIndex = 0;
-const images = [];
-
+let currentIndex = {};
+const images = {};
 
 // Function to load images into the slideshow container
-function loadImages(id, path, totalImages) {
+function loadImages(p, id, path, totalImages) {
+    images[`images${p}`] = [];
+    currentIndex[`index${p}`] = 0;
+
     for (let i = 1; i <= totalImages; i++) {
-        images.push(path +`/M1-${i}.png`);
+        images[`images${p}`].push(path +`/M${p}-${i}.png`);
     }
 
     const slideshow = document.getElementById(id);
-    images.forEach((src, index) => {
+    images[`images${p}`].forEach((src, index) => {
         const img = document.createElement("img");
         img.src = src;
         img.classList.add(id + "-image");
-        if (index === currentIndex) img.classList.add("active"); // Show the first image initially
+        if (index === currentIndex[`index${p}`]) img.classList.add("active"); // Show the first image initially
         slideshow.appendChild(img);
     });
 }
 
 // Function to show the current image based on the index
-function showImage(index, id) {
+function showImage(p,index, id) {
     const imgElement = document.getElementById(id);
 
-    imgElement.src = images[index];
+    imgElement.src = images[`images${p}`][index];
     
 }
 
 // Show the next image
-function nextImage(id) {
-    if (currentIndex == images.length - 1) return;
-    currentIndex = (currentIndex + 1) % images.length; // Wrap around if at the end
-    showImage(currentIndex, id);
+function nextImage(p,id) {
+    if (currentIndex[`index${p}`] == images[`images${p}`].length - 1) return;
+
+    currentIndex[`index${p}`] = (currentIndex[`index${p}`] + 1) % images[`images${p}`].length; // Wrap around if at the end
+    showImage(p,currentIndex[`index${p}`], id);
+
 }
 
 // Show the previous image
-function prevImage(id) {
-    if (currentIndex == 0) return;
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around if at the beginning
+function prevImage(p,id) {
+    if (currentIndex[`index${p}`] == 0) return;
+    currentIndex[`index${p}`] = (currentIndex[`index${p}`] - 1 + images[`images${p}`].length) % images[`images${p}`].length; // Wrap around if at the beginning
     
-    showImage(currentIndex, id);
+    showImage(p,currentIndex[`index${p}`], id);
 }
